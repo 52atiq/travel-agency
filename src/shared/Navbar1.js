@@ -1,9 +1,20 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+
+
+
 export default function NavBar1() {
     const [navbar, setNavbar] = useState(false);
 
+    // const navLinkStyles = ({isActive}) =>{
+    //     return{
+    //         fontWeight : isActive ? 'bold' : 'normal',
+    //         color : isActive ? 'green': 'black',
+    //     }
+    // }
+
+    
     return (
         <nav className="w-full bg-white shadow">
             <div className="justify-center px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
@@ -57,21 +68,21 @@ export default function NavBar1() {
                         }`}
                     >
                         <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                            <Link className="text-black hover:text-indigo-200">
-                                <a href="javascript:void(0)">Home</a>
+                            <Link   to='/' className="text-black  ">
+                              Home
                             </Link>
-                            <li className="text-black hover:text-indigo-200">
-                                <a href="javascript:void(0)">Blog</a>
-                            </li>
-                            <li className="hidden lg:block">
-                                <h3 className="text-5xl">ATIQ</h3>
-                            </li>
-                            <li className="text-black hover:text-indigo-200">
-                                <a href="javascript:void(0)">About US</a>
-                            </li>
-                            <li className="text-black hover:text-indigo-200">
-                                <a href="javascript:void(0)">Contact US</a>
-                            </li>
+                            <Link  to='/gallery' className="text-black ">
+                               Gallery
+                            </Link>
+                            <Link  to='/' className="hidden lg:block">
+                                ATIQ
+                            </Link>
+                            <Link   to='/destination' className="text-black ">
+                               Destination
+                            </Link>
+                            <Link  to='/about' className="text-black ">
+                                About
+                            </Link>
                         </ul>
 
                         
