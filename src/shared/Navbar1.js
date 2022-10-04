@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 
@@ -68,21 +68,24 @@ export default function NavBar1() {
                         }`}
                     >
                         <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                            <Link   to='/' className="text-black  ">
+                            <NavLink  to='/' className={({isActive}) => isActive? "text-red-600":"text-yellow-500"} >
                               Home
-                            </Link>
-                            <Link  to='/gallery' className="text-black ">
+                            </NavLink>
+                            <NavLink  to='/gallery' className={({isActive}) => isActive? "text-red-600":"text-yellow-500"}>
                                Gallery
-                            </Link>
+                            </NavLink>
                             <Link  to='/' className="hidden lg:block">
                                 ATIQ
                             </Link>
-                            <Link   to='/destination' className="text-black ">
+                            <NavLink   to='/destination' className={({isActive}) => isActive? "text-red-600":"text-yellow-500"}>
                                Destination
-                            </Link>
-                            <Link  to='/about' className="text-black ">
+                            </NavLink>
+                            <NavLink  to='/about' className={({isActive}) => isActive? "text-red-600":"text-yellow-500"}>
                                 About
-                            </Link>
+                            </NavLink>
+                            <NavLink  to='/extra' className={({isActive}) => isActive? "text-red-600":"text-yellow-500"}>
+                                Extra
+                            </NavLink>
                         </ul>
 
                         

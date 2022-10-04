@@ -65,21 +65,14 @@ const Destination = () => {
          fetch('location.json')
          .then(res => res.json())
          .then(data => 
-          // setServices(data)
-          console.log(data)
+          setServices(data)
+          // console.log(data)
         
          )
         
     },[services])
    
-    
-  
-  // const filterItem =(categItem)=> {
-  //   const updateItems = menu.filter((curElem) =>{
-  //     return curElem.category === categItem;
-  //   });
-  //   setItems(updateItems);
-  // }
+ 
   const filterItem =(categItem)=> {
     const updateItems = services.filter((curElem) =>{
       return curElem.category === categItem;

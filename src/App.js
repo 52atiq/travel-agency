@@ -1,9 +1,10 @@
 import './App.css';
-import NavBar from './shared/Navbar';
 import NavBar1 from './shared/Navbar1';
 import Destination from './pages/Destination/Destination';
-import Nav2 from './shared/Nav2';
 import Nav3 from './shared/Nav3';
+import Color from './hooks/Color';
+import { Route, Router, Routes } from 'react-router-dom';
+import Extra from './pages/Extra/Extra';
 
 
 
@@ -11,10 +12,13 @@ function App() {
   return (
     <>
   
-    <Nav3 />
-    <Nav2 />
-    <NavBar1 />
-    <Destination />
+  <NavBar1 />
+    <Routes>
+   
+    {/* <Destination /> */}
+    {/* <Color /> */}
+    <Route path='/extra'  element={<Extra />} />
+    </Routes>
 
 
 
