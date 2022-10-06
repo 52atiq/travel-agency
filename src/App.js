@@ -5,6 +5,7 @@ import Nav3 from './shared/Nav3';
 import Color from './hooks/Color';
 import { Route, Router, Routes } from 'react-router-dom';
 import Extra from './pages/Extra/Extra';
+import Loader from './shared/Loader';
 
 
 
@@ -19,6 +20,7 @@ function App() {
     {/* <Color /> */}
     <Route path='/extra'  element={<Extra />} />
     </Routes>
+    <Loader />
 
 
 
