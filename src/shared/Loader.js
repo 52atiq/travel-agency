@@ -13,7 +13,7 @@ const Loader = () => {
         },5000)
     },[])
     return (
-        <div className='flex justify-center items-center '>
+        <div className='flex justify-center items-center w-full h-screen'>
             {
                 loading?
                 // <ClipLoader color={'#36d7b7'} loading={loading}  size={100} aria-label="Loading Spinner" />
