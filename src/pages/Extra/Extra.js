@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from './Image';
 
 const Extra = () => {
     const [color, setColor] = useState('red');
@@ -15,7 +16,7 @@ const Extra = () => {
                 <button onClick={()=>setColor('Purple')} className={active? "text-green-600":"text-blue-500"}>Purple</button>
             </div>
             <h2 className='flex justify-center mt-4'> I Like {color} color</h2>
-             
+             <Image />
         </div>
     );
 };
